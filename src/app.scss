@@ -1,0 +1,63 @@
+@use "@material/theme" with (
+  $primary: #F44336,
+  $secondary:#2196F3,
+  $on-primary: #eeeeee,
+  $on-secondary: #fafafa,
+  $background: #FAFAFA
+);
+@use "@material/button/mdc-button";
+@use "@material/typography/mdc-typography";
+@use "@material/button";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/card";
+@use "@material/snackbar/mdc-snackbar";
+@use "@material/checkbox";
+@use "@material/form-field";
+@use "@material/icon-button";
+
+@include icon-button.core-styles;
+@include checkbox.core-styles;
+@include form-field.core-styles;
+body {
+	background-color: theme.$background;
+}
+a {
+	color: theme.$secondary;
+}
+html {
+	--mdc-typography-font-family: "Bw Quinta Pro";
+	font-feature-settings: "lnum";
+}
+@include card.core-styles;
+@include button.core-styles;
+@include textfield.core-styles;
+
+.signup-box__content {
+	padding: 16px;
+}
+.signup-box {
+	width: 100%;
+	max-width: 400px;
+	min-height: fit-content;
+	height: 400px;
+}
+@media (min-width: 768px) {
+	.signup-box {
+		min-width: 350px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+@media (max-width: 767px) {
+	#form {
+		justify-content: center;
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
+}
