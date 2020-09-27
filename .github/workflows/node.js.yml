@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm run build --if-present
+    - run: webpack
     - run: |
          git config --global user.name "electrolyte-orb"
          git config --global user.email "55880176+electrolyte-orb@users.noreply.github.com"
